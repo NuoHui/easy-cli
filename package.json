@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint --ext .js ./",
     "precommit": "lint-staged",
-    "commitmsg": "commitlint -e $GIT_PARAMS",
+    "commitmsg": "commitlint -e $HUSKY_GIT_PARAMS",
     "release": "standard-version"
   },
   "bin": {
