@@ -11,12 +11,12 @@
   },
   "lint-staged": {
     "src/*.js": [
-      "eslint --fix --ext .js",
+      "eslint --fix",
       "prettier --write",
       "git add"
     ],
     "src/**/*.js": [
-      "eslint --fix --ext .js",
+      "eslint --fix",
       "prettier --write",
       "git add"
     ]
@@ -25,6 +25,12 @@
     "lint": "eslint --ext .js ./",
     "precommit": "lint-staged",
     "commitmsg": "commitlint -e $GIT_PARAMS"
+  },
+  "husky": {
+    "hooks": {
+      "precommit": "lint-staged",
+      "commitmsg": "commitlint -e $GIT_PARAMS"
+    }
   },
   "keywords": [
     "cli",
