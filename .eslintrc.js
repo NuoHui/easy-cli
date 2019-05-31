@@ -8,7 +8,7 @@ module.exports = {
   'globals': {
   },
   'parserOptions': {
-    'ecmaVersion': 2018
+    ecmaVersion: 2018
   },
   "plugins": ["prettier"],
   'rules': {

@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint --ext .js ./",
-    "precommit": "lint-staged",
-    "commitmsg": "commitlint -e $HUSKY_GIT_PARAMS",
+    "precommit": "lint",
+    "commitmsg": "commitlint -e $GIT_PARAMS",
     "release": "standard-version"
   },
   "bin": {
@@ -14,24 +14,6 @@
   },
   "directories": {
     "lib": "lib"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
-    }
-  },
-  "lint-staged": {
-    "src/*.js": [
-      "eslint --fix",
-      "prettier --write",
-      "git add"
-    ],
-    "src/**/*.js": [
-      "eslint --fix",
-      "prettier --write",
-      "git add"
-    ]
   },
   "keywords": [
     "cli",
