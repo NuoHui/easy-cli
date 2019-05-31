@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint --ext .js ./",
+    "precommit": "lint-staged",
+    "commitmsg": "commitlint -e $GIT_PARAMS",
     "release": "standard-version"
   },
   "bin": {
@@ -16,7 +18,7 @@
   "husky": {
     "hooks": {
       "precommit": "lint-staged",
-      "commitmsg": "commitlint -e $GIT_PARAMS"
+      "commit-msg": "commitlint -e $GIT_PARAMS"
     }
   },
   "lint-staged": {
