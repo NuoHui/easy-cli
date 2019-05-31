@@ -1,0 +1,45 @@
+{
+  "name": "@easy/cli",
+  "version": "1.0.0",
+  "description": "a simple CLI for scaffolding of FE",
+  "main": "index.js",
+  "bin": {
+    "easy": "bin/easy.js"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+  },
+  "keywords": [
+    "cli",
+    "tool"
+  ],
+  "author": "xyz",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^7.6.1",
+    "@commitlint/config-conventional": "^7.6.0",
+    "babel-eslint": "^10.0.1",
+    "chalk": "^2.4.2",
+    "commander": "^2.20.0",
+    "cross-env": "^5.2.0",
+    "didyoumean": "^1.2.1",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-node": "^9.0.1",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "husky": "^2.3.0",
+    "lint-staged": "^8.1.7",
+    "nodemon": "^1.19.0",
+    "prettier": "^1.17.1",
+    "semver": "^6.1.1"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}
