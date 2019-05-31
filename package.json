@@ -9,7 +9,22 @@
   "directories": {
     "lib": "lib"
   },
+  "lint-staged": {
+    "src/*.js": [
+      "eslint --fix --ext .js",
+      "prettier --write",
+      "git add"
+    ],
+    "src/**/*.js": [
+      "eslint --fix --ext .js",
+      "prettier --write",
+      "git add"
+    ]
+  },
   "scripts": {
+    "lint": "eslint --ext .js ./",
+    "precommit": "lint-staged",
+    "commitmsg": "commitlint -e $GIT_PARAMS"
   },
   "keywords": [
     "cli",
