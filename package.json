@@ -52,6 +52,7 @@
     "inquirer": "^6.3.1",
     "lint-staged": "^8.1.7",
     "nodemon": "^1.19.0",
+    "ora": "^3.4.0",
     "prettier": "^1.17.1",
     "semver": "^6.1.1",
     "standard-version": "^6.0.1",
