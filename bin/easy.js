@@ -37,21 +37,22 @@ program
 
 // 初始化项目模板
 program
-  .command('create <template-name>')
+  .command('create <template-name> <project-name>')
   .description('create a new project from a template')
-  .action((name, cmd) => {
+  .action((templateName, projectName, cmd) => {
     const argvLen = process.argv.length;
     // 输入参数校验
-    if (argvLen > 4) {
+    if (argvLen > 5) {
       console.log(
         chalk.yellow(
           "\n Info: You provided more than one argument. The first one will be used as the template's name, the rest are ignored."
         )
       );
-      return;
     }
-    require('../lib/easy-create')(name.toLocaleLowerCase());
-    // console.log(name, cmd);
+    require('../lib/easy-create')(
+      lowercase(templateName),
+      lowercase(projectName)
+    );
   });
 
 program
@@ -87,4 +88,8 @@ function suggestCommands(cmd) {
   if (suggestion) {
     console.log(`  ` + chalk.red(`Did you mean ${chalk.yellow(suggestion)}?`));
   }
+}
+
+function lowercase(str) {
+  return str.toLocaleLowerCase();
 }
