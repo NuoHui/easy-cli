@@ -1,5 +1,13 @@
 # 脚手架
 
+一个简易的前端脚手架
+
+## TODO功能
+
+- 支持 node项目, vue的SPA
+- 支持添加项目模板, 删除项目模板
+- 支持自动检测模板依赖更新
+
 ## 思路
 
 - 解耦: 脚手架与模板分离
@@ -7,7 +15,7 @@
   - 模板负责统一项目结构, 依赖项管理
   - 脚手架需要检测模板的版本是否有更新, 支持模板的删除与新建
 
-## 过程
+## 知识点
 
 - package.json下的bin字段
 
@@ -20,9 +28,3 @@ bin: 配置内部命令对应的可执行文件位置, 配置命令后, npm 会�
 - npm link 本地调试
 
 [npm link使用](https://github.com/atian25/blog/issues/17)
-
-
-
-## 使用到的模块
-
-- [commander.js](https://github.com/tj/commander.js/): 命令处理与参数分析
