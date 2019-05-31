@@ -14,12 +14,6 @@
   "directories": {
     "lib": "lib"
   },
-  "husky": {
-    "hooks": {
-      "precommit": "lint-staged",
-      "commitmsg": "commitlint -e $GIT_PARAMS"
-    }
-  },
   "lint-staged": {
     "src/*.js": [
       "eslint --fix",
