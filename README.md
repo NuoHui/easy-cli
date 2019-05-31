@@ -28,3 +28,6 @@ bin: 配置内部命令对应的可执行文件位置, 配置命令后, npm 会�
 - npm link 本地调试
 
 [npm link使用](https://github.com/atian25/blog/issues/17)
+
+
+## changelog
