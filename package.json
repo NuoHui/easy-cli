@@ -5,8 +5,6 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint --ext .js ./",
-    "precommit": "lint",
-    "commitmsg": "commitlint -e $GIT_PARAMS",
     "release": "standard-version"
   },
   "bin": {
@@ -19,6 +17,19 @@
     "cli",
     "tool"
   ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
+  },
   "author": "xyz",
   "license": "MIT",
   "devDependencies": {
