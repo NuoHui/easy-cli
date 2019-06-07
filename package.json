@@ -48,6 +48,7 @@
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-standard": "^4.0.0",
+    "execa": "^1.0.0",
     "husky": "^2.3.0",
     "inquirer": "^6.3.1",
     "lint-staged": "^8.1.7",
@@ -62,6 +63,7 @@
     "node": ">=8.0.0"
   },
   "dependencies": {
+    "lru-cache": "^5.1.1",
     "request": "^2.88.0",
     "request-promise-native": "^1.0.7"
   }
