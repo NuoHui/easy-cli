@@ -9,7 +9,7 @@ const requiredNodeVersion = require('../package.json').engines.node;
 
 didYouMean.threshold = 0.6;
 
-// 检测nNode版本
+// 检测node版本
 function checkNodeVersion(wanted, cliName) {
   // 检测node版本是否符合要求范围
   if (!semver.satisfies(process.version, wanted)) {
