@@ -5,9 +5,9 @@ script: npm run lint && npm run release
 # before_deploy
 deploy:
   provider: npm
-  email: xyz1657413883@gmail.com
-  api_key:
-    secure: ''
+  email: "$NPM_EMAIL"
+  api_key: "$NPM_TOKEN"
+  skip_cleanup: true
   on:
     tags: true
     branch: master
