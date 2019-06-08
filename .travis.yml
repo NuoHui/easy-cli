@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - '8'
+script: npm run lint && npm run release
+# before_deploy
+deploy:
+  provider: npm
+  email: xyz1657413883@gmail.com
+  api_key:
+    secure: ''
+  on:
+    tags: true
+    branch: master
+  tag: latest
