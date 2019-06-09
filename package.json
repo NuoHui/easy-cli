@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint --ext .js ./",
     "release": "standard-version",
-    "publish": "npm version patch -m '[patch]'",
+    "publish": "npm version patch -m 'chore: [patch]'",
     "pushVersion": "git push origin master --tag"
   },
   "bin": {
