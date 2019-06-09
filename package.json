@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint --ext .js ./",
     "release": "standard-version",
-    "postversion": "git push --follow-tags"
+    "postversion": "npm version minor && git push --follow-tags"
   },
   "bin": {
     "easy": "bin/easy.js"

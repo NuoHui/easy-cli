@@ -1,7 +1,12 @@
 language: node_js
 node_js:
   - '8'
-script: npm run lint && npm run release
+cache:
+  directories:
+    - node_modules
+install:
+  - npm install
+script: npm run lint && npm run postversion
 # before_deploy
 deploy:
   provider: npm
