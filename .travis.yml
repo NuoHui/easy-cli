@@ -6,7 +6,7 @@ cache:
     - node_modules
 install:
   - npm install
-script: npm run lint && npm run publish && npm run postversion
+script: npm run lint
 # before_deploy
 deploy:
   provider: npm
@@ -17,3 +17,8 @@ deploy:
     tags: true
     branch: master
   tag: latest
+after_success:
+  - npm version patch
+  - git add .
+  - git commit -m "patch"
+  - git push -u origin master

@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint --ext .js ./",
-    "release": "standard-version",
-    "publish": "npm version patch",
-    "postversion": "git add . && git commit -m '[patch]' && git push --follow-tags"
+    "release": "standard-version"
   },
   "bin": {
     "easy": "bin/easy.js"
