@@ -6,7 +6,7 @@ cache:
     - node_modules
 install:
   - npm install
-script: npm run lint
+script: npm run lint && npm run publish && npm run postversion
 # before_deploy
 deploy:
   provider: npm

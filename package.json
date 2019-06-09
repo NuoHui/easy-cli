@@ -1,12 +1,13 @@
 {
   "name": "easy-tool-cli",
-  "version": "1.0.6",
+  "version": "1.0.0",
   "description": "a simple CLI for scaffolding of FE",
   "main": "index.js",
   "scripts": {
     "lint": "eslint --ext .js ./",
     "release": "standard-version",
-    "postversion": "npm version patch"
+    "publish": "npm version patch",
+    "postversion": "git push --follow-tags"
   },
   "bin": {
     "easy": "bin/easy.js"
