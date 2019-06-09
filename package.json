@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint --ext .js ./",
     "release": "standard-version",
-    "publish": "npm version patch"
+    "publish": "npm version patch -m '[patch]'"
   },
   "bin": {
     "easy": "bin/easy.js"
