@@ -19,7 +19,7 @@ deploy:
     tags: true
     branch: master
 after_success:
-  - git add .
-  - git commit -m 'keep clean'
-  - npm version patch -m '[patch]'
-  - git push origin master --tag
+  # - git add .
+  # - git commit -m 'keep clean'
+  # - npm version patch -m '[patch]'
+  # - git push origin master --tag
