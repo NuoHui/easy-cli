@@ -6,10 +6,14 @@
   "scripts": {
     "lint": "eslint --ext .js ./",
     "release": "standard-version",
-    "publish": "npm version patch -m '[patch]'"
+    "publish": "npm version patch -m '[patch]'",
+    "pushVersion": "git push origin master --tag"
   },
   "bin": {
     "easy": "bin/easy.js"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "directories": {
     "lib": "lib"
