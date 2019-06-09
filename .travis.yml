@@ -6,7 +6,10 @@ cache:
     - node_modules
 install:
   - npm install
-script: npm run lint
+script:
+  - git remote rm origin
+  - git remote add origin https://NuoHui:$GITHUB_TOKEN@github.com/NuoHui/easy-cli.git
+  - git symbolic-ref HEAD refs/heads/master
 deploy:
   provider: npm
   email: "$NPM_EMAIL"
@@ -15,3 +18,6 @@ deploy:
   on:
     tags: true
     branch: master
+after_success:
+  - npm version patch -m '[patch]'
+  - git push origin master --tag
