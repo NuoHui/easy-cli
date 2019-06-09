@@ -7,18 +7,15 @@ cache:
 install:
   - npm install
 script: npm run lint
-# before_deploy
+before_deploy:
+  - ./node_modules/.bin/patch-version
 deploy:
   provider: npm
   email: "$NPM_EMAIL"
-  api_key: "$NPM_TOKEN"
+  api_key:
+    secure: "$NPM_TOKEN"
   skip_cleanup: true
   on:
     tags: true
     branch: master
   tag: latest
-after_success:
-  - npm version patch
-  - git add .
-  - git commit -m "patch"
-  - git push -u origin master
