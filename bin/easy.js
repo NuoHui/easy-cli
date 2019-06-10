@@ -63,7 +63,14 @@ program
     require('../lib/list-template')();
   });
 
-program.command('delete', 'delete a project template'); // 删除一个项目模板
+// 删除一个项目模板
+program
+  .command('delete <template-name>')
+  .description('delete a project template')
+  .action((templateName, cmd) => {
+    validateArgsLen(process.argv.length, 4);
+    require('../lib/delete-template')(templateName);
+  });
 
 program.arguments('<command>').action(cmd => {
   program.outputHelp();
