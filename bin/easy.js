@@ -42,10 +42,7 @@ program
   .action((templateName, projectName, cmd) => {
     // 输入参数校验
     validateArgsLen(process.argv.length, 5);
-    require('../lib/easy-create')(
-      lowercase(templateName),
-      lowercase(projectName)
-    );
+    require('../lib/easy-create')(lowercase(templateName), projectName);
   });
 
 // 添加一个项目模板
@@ -54,10 +51,7 @@ program
   .description('add a project template')
   .action((templateName, gitRepoAddress, cmd) => {
     validateArgsLen(process.argv.length, 5);
-    require('../lib/add-template')(
-      lowercase(templateName),
-      lowercase(gitRepoAddress)
-    );
+    require('../lib/add-template')(lowercase(templateName), gitRepoAddress);
   });
 program
   .command('list', 'list available project template') // 列出支持的项目模板
