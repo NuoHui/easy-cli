@@ -6,8 +6,9 @@
   "scripts": {
     "lint": "eslint --ext .js ./",
     "release": "standard-version",
-    "publish": "npm version patch -m 'chore: [patch]'",
-    "pushVersion": "git push origin master --tag"
+    "publishPatch": "npm version patch -m 'chore: [patch]'",
+    "publishMinor": "npm version patch -m 'chore: [minor]'",
+    "publishMajor": "npm version patch -m 'chore: [major]'"
   },
   "bin": {
     "easy": "bin/easy.js"
