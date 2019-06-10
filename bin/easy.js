@@ -53,9 +53,17 @@ program
     validateArgsLen(process.argv.length, 5);
     require('../lib/add-template')(lowercase(templateName), gitRepoAddress);
   });
+
+// 列出支持的项目模板
 program
-  .command('list', 'list available project template') // 列出支持的项目模板
-  .command('delete', 'delete a project template'); // 删除一个项目模板
+  .command('list')
+  .description('list all available project template')
+  .action(cmd => {
+    validateArgsLen(process.argv.length, 3);
+    require('../lib/list-template')();
+  });
+
+program.command('delete', 'delete a project template'); // 删除一个项目模板
 
 program.arguments('<command>').action(cmd => {
   program.outputHelp();
@@ -95,7 +103,7 @@ function validateArgsLen(argvLen, maxArgvLens) {
   if (argvLen > maxArgvLens) {
     console.log(
       chalk.yellow(
-        '\n Info: You provided more than two argument. the rest are ignored.'
+        '\n Info: You provided more than argument. the rest are ignored.'
       )
     );
   }
