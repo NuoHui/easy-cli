@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-const program = require('commander');
-const chalk = require('chalk');
-const didYouMean = require('didyoumean');
-const semver = require('semver');
+const program = require('commander'); // 命令处理, 参数分析
+const chalk = require('chalk'); // 命令行输出美化
+const didYouMean = require('didyoumean'); // 简易的智能匹配引擎
+const semver = require('semver'); // npm的语义版本包
 const enhanceErrorMessages = require('../lib/util/enhanceErrorMessages.js');
 const requiredNodeVersion = require('../package.json').engines.node;
 
@@ -40,24 +40,27 @@ program
   .command('create <template-name> <project-name>')
   .description('create a new project from a template')
   .action((templateName, projectName, cmd) => {
-    const argvLen = process.argv.length;
     // 输入参数校验
-    if (argvLen > 5) {
-      console.log(
-        chalk.yellow(
-          "\n Info: You provided more than one argument. The first one will be used as the template's name, the rest are ignored."
-        )
-      );
-    }
+    validateArgsLen(process.argv.length, 5);
     require('../lib/easy-create')(
       lowercase(templateName),
       lowercase(projectName)
     );
   });
 
+// 添加一个项目模板
+program
+  .command('add <template-name> <git-repo-address>')
+  .description('add a project template')
+  .action((templateName, gitRepoAddress, cmd) => {
+    validateArgsLen(process.argv.length, 5);
+    require('../lib/add-template')(
+      lowercase(templateName),
+      lowercase(gitRepoAddress)
+    );
+  });
 program
   .command('list', 'list available project template') // 列出支持的项目模板
-  .command('add', 'add a project template') // 添加一个项目模板
   .command('delete', 'delete a project template'); // 删除一个项目模板
 
 program.arguments('<command>').action(cmd => {
@@ -67,7 +70,7 @@ program.arguments('<command>').action(cmd => {
   suggestCommands(cmd);
 });
 
-// 重新commander某些事件
+// 重写commander某些事件
 enhanceErrorMessages('missingArgument', argsName => {
   return `Missing required argument ${chalk.yellow(`<${argsName}>`)}`;
 });
@@ -92,4 +95,14 @@ function suggestCommands(cmd) {
 
 function lowercase(str) {
   return str.toLocaleLowerCase();
+}
+
+function validateArgsLen(argvLen, maxArgvLens) {
+  if (argvLen > maxArgvLens) {
+    console.log(
+      chalk.yellow(
+        '\n Info: You provided more than two argument. the rest are ignored.'
+      )
+    );
+  }
 }
