@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const program = require('commander'); // 命令处理, 参数分析
+const program = require('commander'); // 命令行工具
 const chalk = require('chalk'); // 命令行输出美化
 const didYouMean = require('didyoumean'); // 简易的智能匹配引擎
 const semver = require('semver'); // npm的语义版本包
@@ -9,7 +9,6 @@ const requiredNodeVersion = require('../package.json').engines.node;
 
 didYouMean.threshold = 0.6;
 
-// 检测node版本
 function checkNodeVersion(wanted, cliName) {
   // 检测node版本是否符合要求范围
   if (!semver.satisfies(process.version, wanted)) {
@@ -29,10 +28,11 @@ function checkNodeVersion(wanted, cliName) {
   }
 }
 
+// 检测node版本
 checkNodeVersion(requiredNodeVersion, '@easy/cli');
 
 program
-  .version(require('../package').version) // 版本
+  .version(require('../package').version, '-v, --version') // 版本
   .usage('<command> [options]'); // 使用信息
 
 // 初始化项目模板
@@ -72,7 +72,9 @@ program
     require('../lib/delete-template')(templateName);
   });
 
+// 处理非法命令
 program.arguments('<command>').action(cmd => {
+  // 不退出输出帮助信息
   program.outputHelp();
   console.log(`  ` + chalk.red(`Unknown command ${chalk.yellow(cmd)}.`));
   console.log();
@@ -86,9 +88,9 @@ enhanceErrorMessages('missingArgument', argsName => {
 
 program.parse(process.argv); // 把命令行参数传给commander解析
 
-if (!process.argv.slice(2).length) {
-  program.outputHelp();
-}
+// if (!process.argv.slice(2).length) {
+//   program.outputHelp();
+// }
 
 // easy支持的命令
 function suggestCommands(cmd) {
