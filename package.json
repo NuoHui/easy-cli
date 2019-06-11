@@ -46,10 +46,7 @@
     "@commitlint/cli": "^7.6.1",
     "@commitlint/config-conventional": "^7.6.0",
     "babel-eslint": "^10.0.1",
-    "chalk": "^2.4.2",
-    "commander": "^2.20.0",
     "cross-env": "^5.2.0",
-    "didyoumean": "^1.2.1",
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.3.0",
     "eslint-config-standard": "^12.0.0",
@@ -58,26 +55,29 @@
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-standard": "^4.0.0",
-    "execa": "^1.0.0",
     "husky": "^2.3.0",
-    "inquirer": "^6.3.1",
     "lint-staged": "^8.1.7",
     "nodemon": "^1.19.0",
-    "ora": "^3.4.0",
     "prettier": "^1.17.1",
-    "semver": "^6.1.1",
-    "standard-version": "^6.0.1",
-    "validate-npm-package-name": "^3.0.0"
+    "standard-version": "^6.0.1"
   },
   "engines": {
     "node": ">=8.0.0"
   },
   "dependencies": {
+    "chalk": "^2.4.2",
+    "commander": "^2.20.0",
+    "didyoumean": "^1.2.1",
     "download-git-repo": "^2.0.0",
+    "execa": "^1.0.0",
     "fs-extra": "^8.0.1",
+    "inquirer": "^6.3.1",
     "is-git-url": "^1.0.0",
     "lru-cache": "^5.1.1",
+    "ora": "^3.4.0",
     "request": "^2.88.0",
-    "request-promise-native": "^1.0.7"
+    "request-promise-native": "^1.0.7",
+    "semver": "^6.1.1",
+    "validate-npm-package-name": "^3.0.0"
   }
 }
