@@ -88,9 +88,10 @@ enhanceErrorMessages('missingArgument', argsName => {
 
 program.parse(process.argv); // 把命令行参数传给commander解析
 
-// if (!process.argv.slice(2).length) {
-//   program.outputHelp();
-// }
+// 输入easy显示帮助信息
+if (!process.argv.slice(1).length) {
+  program.outputHelp();
+}
 
 // easy支持的命令
 function suggestCommands(cmd) {
