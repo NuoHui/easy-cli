@@ -40,7 +40,7 @@
       "git add"
     ]
   },
-  "author": "xyz",
+  "author": "xyz <xyz1657413883@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@commitlint/cli": "^7.6.1",
