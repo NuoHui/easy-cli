@@ -1,6 +1,6 @@
 {
   "name": "easy-tool-cli",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "a simple CLI for scaffolding of FE",
   "main": "index.js",
   "scripts": {
