@@ -1,11 +1,10 @@
 {
   "name": "easy-tool-cli",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "a simple CLI for scaffolding of FE",
   "main": "index.js",
   "scripts": {
     "lint": "eslint --ext .js ./",
-    "version": "node scripts/getChangelog.js && git add CHANGELOG.md",
     "release": "node scripts/release.js"
   },
   "bin": {
