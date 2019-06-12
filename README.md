@@ -6,6 +6,7 @@
   <a><img src="https://img.shields.io/github/stars/NuoHui/easy-cli.svg"  /></a>
   <a><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg" /></a>
   <a><img src="https://img.shields.io/badge/build-passing-green.svg" /></a>
+  <a><img src="https://img.shields.io/npm/v/easy-tool-cli.svg" /></a>
 </p>
 <hr>
 
@@ -15,8 +16,8 @@
 
 ## 功能
 
-- 支持node项目, 基于vue的SPA应用
-- 支持添加项目模板, 删除项目模板
+- 支持多类型项目模板(目前Node, Vue CSR), 模板都会集成代码检测, 工作流等
+- 支持添加项目模板, 删除项目模板(flok 作为自己的工具推荐使用)
 - 支持自动检测模板依赖更新
 
 ## 使用方法
@@ -48,3 +49,18 @@ $ easy list
 ```
 $ easy add 模板名<template-name> 模板github仓库地址,支持ssh/https格式<<git-repo-address>>
 ```
+
+### 发布到npm
+
+执行pkg下的脚本, push代码, travis就会执行检测后续自动发到npm.
+```
+"publishPatch": "npm version patch -m 'chore: [patch]'",
+"publishMinor": "npm version patch -m 'chore: [minor]'",
+"publishMajor": "npm version patch -m 'chore: [major]'"
+```
+
+### TODOLIST
+
+- 优化Node应用模板
+- 完成Vue单页面应用模板
+- 添加单测
