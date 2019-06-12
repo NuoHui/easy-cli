@@ -10,23 +10,36 @@
 </p>
 <hr>
 
-# 脚手架
+# easyCli
 
 一个简易上手的前端脚手架
 
-## 功能
+## Features
 
 - 支持多类型项目模板(目前Node, Vue CSR), 模板都会集成代码检测, 工作流等
 - 支持添加项目模板, 删除项目模板(flok 作为自己的工具推荐使用)
 - 支持自动检测模板依赖更新
 
-## 使用方法
+## Installation & Quick start
 
 ### 安装
 
+Windows系统安装
 ```
 $ npm i easy-tool-cli -g
 ```
+
+Mac下安装
+```
+$ sudo npm i easy-tool-cli -g
+```
+
+### 查看帮助信息
+
+```
+$ easy
+```
+
 
 ### 创建项目
 
@@ -47,7 +60,13 @@ $ easy list
 ### 添加项目模板
 
 ```
-$ easy add 模板名<template-name> 模板github仓库地址,支持ssh/https格式<<git-repo-address>>
+$ easy add 模板名<template-name> 模板github仓库地址,支持ssh/https格式<git-repo-address>
+```
+
+### 删除项目模板
+
+```
+$ easy delete 模板名<template-name>
 ```
 
 ### 发布到npm
