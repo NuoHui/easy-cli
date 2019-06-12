@@ -3,7 +3,6 @@
   <a><img src="https://img.shields.io/github/issues/NuoHui/easy-cli.svg" /></a>
   <a><img src="https://img.shields.io/github/forks/NuoHui/easy-cli.svg"  /></a>
   <a><img src="https://img.shields.io/github/stars/NuoHui/easy-cli.svg"  /></a>
-  <a><img src="https://img.shields.io/github/stars/NuoHui/easy-cli.svg"  /></a>
   <a><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg" /></a>
   <a><img src="https://img.shields.io/badge/build-passing-green.svg" /></a>
   <a><img src="https://img.shields.io/npm/v/easy-tool-cli.svg" /></a>
@@ -73,9 +72,7 @@ $ easy delete 模板名<template-name>
 
 执行pkg下的脚本, push代码, travis就会执行检测后续自动发到npm.
 ```
-"publishPatch": "npm version patch -m 'chore: [patch]'",
-"publishMinor": "npm version patch -m 'chore: [minor]'",
-"publishMajor": "npm version patch -m 'chore: [major]'"
+npm run release
 ```
 
 ### TODOLIST
