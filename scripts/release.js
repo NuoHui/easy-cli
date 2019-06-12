@@ -34,7 +34,7 @@ const release = async () => {
     }
   ]);
   if (yes) {
-    execSync(`npm version ${release} -m "Update to %s"`, {
+    execSync(`npm version ${release} -m "chore: Update to %s"`, {
       stdio: 'inherit'
     });
   }
