@@ -5,10 +5,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint --ext .js ./",
-    "release": "standard-version",
-    "publishPatch": "npm version patch -m 'chore: [patch]'",
-    "publishMinor": "npm version patch -m 'chore: [minor]'",
-    "publishMajor": "npm version patch -m 'chore: [major]'"
+    "version": "node scripts/getChangelog.js && git add CHANGELOG.md",
+    "release": "node scripts/release.js"
   },
   "bin": {
     "easy": "bin/easy.js"
