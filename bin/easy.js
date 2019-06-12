@@ -89,7 +89,7 @@ enhanceErrorMessages('missingArgument', argsName => {
 program.parse(process.argv); // 把命令行参数传给commander解析
 
 // 输入easy显示帮助信息
-if (!process.argv.slice(1).length) {
+if (!process.argv.slice(2).length) {
   program.outputHelp();
 }
 
