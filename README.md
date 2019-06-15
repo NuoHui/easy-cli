@@ -78,5 +78,4 @@ npm run release
 ### TODOLIST
 
 - 优化Node应用模板
-- 完成Vue单页面应用模板
 - 添加单测
