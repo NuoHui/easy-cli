@@ -15,7 +15,7 @@
 
 ## Features
 
-- 支持多类型项目模板(目前Node, Vue CSR), 模板都会集成代码扫描, 工作流等, 具体查看模板github地址。
+- 支持多类型项目模板(目前[Node](https://github.com/NuoHui/node_code_constructor), [Vue CSR](https://github.com/NuoHui/vue_code_constructor)), 模板都会集成代码扫描, 工作流等, 具体查看模板github地址。
 - 支持添加项目模板, 删除项目模板(flok 作为自己的工具推荐使用)
 - 支持自动检测脚手架更新
 
