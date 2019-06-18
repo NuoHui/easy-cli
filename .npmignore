@@ -1,0 +1,17 @@
+test
+docs
+example
+coverage
+.editorconfig
+.eslintignore
+.eslintrc.js
+.gitignore
+.prettierrc.js
+.travis.yml
+.commitlint.config.js
+jest.config.js
+package-lock.lock
+.vscode
+coverage.lcov
+.github
+CHANGELOG.md
