@@ -11,7 +11,7 @@
 
 # easyCli
 
-一个简易上手的前端脚手架, 轻松创建项目模板, 实现0配置, 快速开发。
+一个快速上手的前端脚手架, 轻松创建项目模板, 实现0配置, 快速开发。
 
 ## Features
 
@@ -70,13 +70,18 @@ $ easy delete 模板名<template-name>
 
 ### 发布到npm
 
-执行pkg下的脚本, push代码, travis就会执行检测后续自动发到npm.
+执行pkg下的脚本, 自动发版并且生成changelog, travis就会执行检测后续自动发到npm.
 ```
 npm run release
 ```
 
-### TODOLIST
+
+## Changelog
+
+[Changelog](https://github.com/NuoHui/easy-cli/blob/master/CHANGELOG.md)
+
+## TODOLIST
 
 - 优化Node应用模板
+- 优化Vue应用模板
 - 添加单测
-- 添加changelog
