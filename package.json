@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint --ext .js ./",
-    "release": "node scripts/release.js"
+    "release": "node scripts/release.js",
+    "test": "jest --color"
   },
   "bin": {
     "easy": "bin/easy.js"
@@ -53,6 +54,7 @@
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-standard": "^4.0.0",
     "husky": "^2.3.0",
+    "jest": "^24.8.0",
     "lint-staged": "^8.1.7",
     "nodemon": "^1.19.0",
     "prettier": "^1.17.1",
